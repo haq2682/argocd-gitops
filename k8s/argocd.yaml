@@ -3,6 +3,11 @@ kind: Application
 metadata:
   name: argocd-gitops
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: app=haq2682/argocd-nodejs
+    argocd-image-updater.argoproj.io/app.update-strategy: digest
+    argocd-image-updater.argoproj.io/app.force-update: "true"
+    argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   project: default
   source:
