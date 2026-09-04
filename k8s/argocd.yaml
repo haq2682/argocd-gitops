@@ -4,7 +4,7 @@ metadata:
   name: argocd-gitops
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: app=haq2682/argocd-nodejs
+    argocd-image-updater.argoproj.io/image-list: app=haq2682/argocd-nodejs:latest
     argocd-image-updater.argoproj.io/app.update-strategy: digest
     argocd-image-updater.argoproj.io/app.force-update: "true"
     argocd-image-updater.argoproj.io/write-back-method: git
@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/haq2682/argocd-gitops.git
-    targetRevision: HEAD
+    targetRevision: main
     path: k8s
   destination:
     server: https://kubernetes.default.svc
