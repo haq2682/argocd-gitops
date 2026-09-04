@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: argocd-nodejs
-          image: haq2682/argocd-nodejs:v1
+          image: haq2682/argocd-nodejs
           ports:
             - containerPort: 3000
           envFrom:
