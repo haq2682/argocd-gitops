@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-gitops
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/haq2682/argocd-gitops.git
+    targetRevision: HEAD
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true      # Deletes resources from Minikube if you delete them from GitHub
+      selfHeal: true   # Overwrites manual kubectl changes to match GitHub
