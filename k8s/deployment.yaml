@@ -4,7 +4,7 @@ metadata:
   name: argocd-nodejs-config
 data:
   PORT: "3000"
-  VERSION: "1.0"
+  VERSION: "2.0"
 ---
 apiVersion: apps/v1
 kind: Deployment
