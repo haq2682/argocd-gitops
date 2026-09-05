@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - haq2682/argocd-nodejs:latest@sha256:92b840259acb8d3dc5eeb883b25f524a2e02d45ae2da0ceb45dd329591e1ab25
