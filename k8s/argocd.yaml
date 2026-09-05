@@ -3,11 +3,6 @@ kind: Application
 metadata:
   name: argocd-gitops
   namespace: argocd
-  annotations:
-    argocd-image-updater.argoproj.io/image-list: app=haq2682/argocd-nodejs:latest
-    argocd-image-updater.argoproj.io/app.update-strategy: digest
-    argocd-image-updater.argoproj.io/app.force-update: "true"
-    argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   project: default
   source:
@@ -19,5 +14,5 @@ spec:
     namespace: default
   syncPolicy:
     automated:
-      prune: true      # Deletes resources from Minikube if you delete them from GitHub
-      selfHeal: true   # Overwrites manual kubectl changes to match GitHub
+      prune: true
+      selfHeal: true

@@ -4,6 +4,21 @@ metadata:
   name: argocd-image-updater
   namespace: argocd
 spec:
+  writeBackConfig:
+    method: "git:secret:argocd/git-creds"
+    gitConfig:
+      repository: "https://github.com/haq2682/argocd-gitops.git"
+      branch: "main"
+      writeBackTarget: "kustomization"
+
   applicationRefs:
     - namePattern: "argocd-gitops"
-      useAnnotations: true
+      images:
+        - alias: "argocd-gitops"
+          imageName: "haq2682/argocd-gitops:latest"
+          commonUpdateSettings:
+            updateStrategy: "digest"
+      writeBackConfig:
+        method: "git:secret:argocd/git-creds"
+        gitConfig:
+          writeBackTarget: "kustomization"

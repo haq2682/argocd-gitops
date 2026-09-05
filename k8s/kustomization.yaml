@@ -5,3 +5,8 @@ resources:
   - deployment.yaml
   - argocd.yaml
   - image-updater.yaml
+
+images:
+  - name: haq2682/argocd-gitops
+    newName: haq2682/argocd-gitops
+    newTag: latest
