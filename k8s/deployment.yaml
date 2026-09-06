@@ -11,7 +11,7 @@ kind: Deployment
 metadata:
   name: argocd-nodejs
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: argocd-nodejs
