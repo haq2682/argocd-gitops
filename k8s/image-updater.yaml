@@ -14,8 +14,8 @@ spec:
   applicationRefs:
     - namePattern: "argocd-gitops"
       images:
-        - alias: "argocd-gitops"
-          imageName: "haq2682/argocd-gitops:latest"
+        - alias: "argocd-nodejs"
+          imageName: "haq2682/argocd-nodejs:latest"
           commonUpdateSettings:
             updateStrategy: "digest"
       writeBackConfig:

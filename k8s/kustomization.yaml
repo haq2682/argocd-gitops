@@ -7,6 +7,6 @@ resources:
   - image-updater.yaml
 
 images:
-  - name: haq2682/argocd-gitops
-    newName: haq2682/argocd-gitops
+  - name: haq2682/argocd-nodejs
+    newName: haq2682/argocd-nodejs
     newTag: latest
