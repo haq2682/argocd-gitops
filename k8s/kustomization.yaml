@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - deployment.yaml
+  - argocd.yaml
+  - image-updater.yaml
+
+images:
+  - name: haq2682/argocd-nodejs
+    newTag: latest
+    digest: sha256:f8f80a83f6dafdf3596b702be4ad0bef5a78788281c5a17f9bea2f9681e64d28
