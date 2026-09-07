@@ -9,4 +9,4 @@ resources:
 images:
   - name: haq2682/argocd-nodejs
     newTag: latest
-    digest: sha256:ef48380f4758bc943373fb125c3745aeb9994de8a83e3682ff4233c145e48dec
+    digest: sha256:87d74d6ff0d11de6255e613fbf5d0ebaf0eac6abfafc1cb25f1bafd634cb29b0
